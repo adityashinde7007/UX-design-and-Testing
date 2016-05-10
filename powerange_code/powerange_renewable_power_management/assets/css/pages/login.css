@@ -1,0 +1,182 @@
+
+.navbar-inverse .navbar-nav>li>a:hover 
+{
+background-color:#d62d20;
+}
+
+
+
+.navbar-inverse .navbar-nav>li>a:focus
+{
+background-color:#d62d20;
+}
+
+.page-login {
+  color: #ffffff;
+}
+
+#navcolor{
+  background-color: #333333;
+  padding: 0px;
+  margin-top: 0px;
+}
+
+
+
+.navbar-nav > li > a, .navbar-brand {
+    padding-top:12px !important; padding-bottom:0px !important;
+    height: 48px;
+}
+
+.navbar {min-height:30px !important;}
+
+.navbar-default {
+    background-color: #F8F8F8;
+    border-color: #E7E7E7;
+}
+
+.page-login:before {
+  position: fixed;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-image: url("../../example-images/login.jpg");
+  background-position-y: top;
+  -webkit-background-size: cover;
+          background-size: cover;
+  z-index: -1;
+}
+
+
+.page-login:after {
+  position: fixed;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(38, 50, 56, 0.85);
+  z-index: -1;
+}
+.page-login .brand {
+  margin-bottom: 28px;
+}
+.page-login .brand-text {
+  color: #ffffff;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.page-login form {
+  width: 340px;
+  margin: 30px 0;
+}
+.page-login form a {
+  margin-left: 20px;
+  color: rgba(255, 255, 255, 0.5);
+}
+.page-login .page-copyright {
+  color: #ffffff;
+}
+.page-login .page-copyright .social .icon,
+.page-login .page-copyright .social .icon:hover,
+.page-login .page-copyright .social .icon:active {
+  color: #ffffff;
+}
+@media (max-width: 480px) {
+  .page-login form {
+    width: auto;
+  }
+}
+
+
+footer {
+    margin-bottom: 0px;
+
+    
+}
+
+
+
+
+.icon-background3 {
+    color: #178D81;
+}
+
+
+
+.circle-icon2 {
+    background: #ffc0c0;
+    padding:30px;
+    border-radius: 50%;
+}
+
+.circle-icon {
+    background: #ffc0c0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 100px;
+    vertical-align: middle;
+    padding: 30px;
+}
+
+  .center-boxes div{
+     margin:0 -4% 0 4%;
+  }
+
+
+
+body {
+    padding-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+
+/* Header Image Background - Change the URL below to your image path (example: ../images/background.jpg) */
+
+.business-header {
+    height: 500px;
+
+    background: url('../../images/hero.png') center center no-repeat scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+ }
+
+#how1 {
+    background: url('../../images/how.png') center center no-repeat scroll;
+    -webkit-background-size: 627px 2000px;
+    -moz-background-size: 627px 2000px;
+    background-size: 627px 2000px;
+    -o-background-size: 627px 2000px;
+}
+
+/* Customize the text color and shadow color and to optimize text legibility. */
+
+.tagline {
+    margin-top:200px;
+    margin-left:110px;
+    text-shadow: 0 0 10px #000;
+    color: #ffff;
+    background-color: rgba(0,0,0,0.5);
+    width: 450px;
+    height: 200px;
+    padding-top: 5px;
+    padding-left: 15px;
+}
+
+.img-center {
+    margin: 0 auto;
+}
+
+footer {
+    margin: 50px 0;
+}

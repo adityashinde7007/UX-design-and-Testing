@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html class="no-js before-run" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+  <meta name="description" content="bootstrap admin template">
+  <meta name="author" content="">
+
+  <title>Login | POWERange Admin Template</title>
+
+  <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+  <link rel="shortcut icon" href="../assets/images/favicon.ico">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/bootstrap-extend.min.css">
+  <link rel="stylesheet" href="../assets/css/site.min.css">
+
+  <link rel="stylesheet" href="../assets/vendor/animsition/animsition.css">
+  <link rel="stylesheet" href="../assets/vendor/asscrollable/asScrollable.css">
+  <link rel="stylesheet" href="../assets/vendor/switchery/switchery.css">
+  <link rel="stylesheet" href="../assets/vendor/intro-js/introjs.css">
+  <link rel="stylesheet" href="../assets/vendor/slidepanel/slidePanel.css">
+  <link rel="stylesheet" href="../assets/vendor/flag-icon-css/flag-icon.css">
+
+
+  <!-- Page -->
+  <link rel="stylesheet" href="../assets/css/pages/login.css">
+
+  <!-- Fonts -->
+  <link rel="stylesheet" href="../assets/fonts/web-icons/web-icons.min.css">
+  <link rel="stylesheet" href="../assets/css/../fonts/mfglabs/mfglabs.css">
+  <link rel="stylesheet" href="../assets/fonts/brand-icons/brand-icons.min.css">
+  <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,300italic'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+ 
+
+
+  <!--[if lt IE 9]>
+    <script src="../assets/vendor/html5shiv/html5shiv.min.js"></script>
+    <![endif]-->
+
+  <!--[if lt IE 10]>
+    <script src="../assets/vendor/media-match/media.match.min.js"></script>
+    <script src="../assets/vendor/respond/respond.min.js"></script>
+  <![endif]-->
+
+  <style type="text/css">
+
+
+.logo {
+    width: 213px;
+    height: 36px;
+    background: url('http://i.imgur.com/fd8Lcso.png') no-repeat;
+    margin: 30px auto;
+}
+
+.login-block {
+    width: 320px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    border-top: 5px solid #ff656c;
+    margin: 0 auto;
+}
+
+.login-block h1 {
+    text-align: center;
+    color: #000;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.login-block input {
+    width: 100%;
+    height: 42px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-family: Montserrat;
+    padding: 0 20px 0 50px;
+    outline: none;
+}
+
+.login-block input#username {
+    background: #fff url('http://i.imgur.com/u0XmBmv.png') 20px top no-repeat;
+    background-size: 16px 80px;
+}
+
+.login-block input#username:focus {
+    background: #fff url('http://i.imgur.com/u0XmBmv.png') 20px bottom no-repeat;
+    background-size: 16px 80px;
+}
+
+.login-block input#password {
+    background: #fff url('http://i.imgur.com/Qf83FTt.png') 20px top no-repeat;
+    background-size: 16px 80px;
+}
+
+.login-block input#password:focus {
+    background: #fff url('http://i.imgur.com/Qf83FTt.png') 20px bottom no-repeat;
+    background-size: 16px 80px;
+}
+
+.login-block input:active, .login-block input:focus {
+    border: 1px solid #ff656c;
+}
+
+.login-block button {
+    width: 100%;
+    height: 40px;
+    background: #ff656c;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #e15960;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: Montserrat;
+    outline: none;
+    cursor: pointer;
+}
+
+.login-block button:hover {
+    background: #ff7b81;
+}
+
+
+
+
+    .bs-example{
+      margin: 20px;
+    }
+    .modal-content iframe{
+        margin: 0 auto;
+        display: block;
+    }
+
+.modalDialog {
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+.modalDialog:target {
+    opacity:1;
+    pointer-events: auto;
+}
+.modalDialog > div {
+    width: 400px;
+    position: relative;
+    margin: 10% auto;
+    padding: 5px 20px 13px 20px;
+    border-radius: 10px;
+    background: #fff;
+  
+.close {
+    background: #606061;
+    color: #FFFFFF;
+    line-height: 25px;
+    position: absolute;
+    right: -12px;
+    text-align: center;
+    top: -10px;
+    width: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    -moz-box-shadow: 1px 1px 3px #000;
+    -webkit-box-shadow: 1px 1px 3px #000;
+    box-shadow: 1px 1px 3px #000;
+}
+.close:hover {
+    background: #00d9ff;
+}
+
+
+
+
+
+
+
+
+
+
+.modalDialog1 {
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+.modalDialog1:target {
+    opacity:1;
+    pointer-events: auto;
+}
+.modalDialog1 > div {
+    width: 400px;
+    position: relative;
+    margin: 10% auto;
+    padding: 5px 20px 13px 20px;
+    border-radius: 10px;
+    background: #fff;
+    background: -moz-linear-gradient(#fff, #999);
+    background: -webkit-linear-gradient(#fff, #999);
+    background: -o-linear-gradient(#fff, #999);
+}
+.close1 {
+    background: #606061;
+    color: #FFFFFF;
+    line-height: 25px;
+    position: absolute;
+    right: -12px;
+    text-align: center;
+    top: -10px;
+    width: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    -moz-box-shadow: 1px 1px 3px #000;
+    -webkit-box-shadow: 1px 1px 3px #000;
+    box-shadow: 1px 1px 3px #000;
+}
+.close1:hover {
+    background: #00d9ff;
+}
+
+
+
+  </style>
+
+  <!-- Scripts -->
+  <script src="../assets/vendor/modernizr/modernizr.js"></script>
+  <script src="../assets/vendor/breakpoints/breakpoints.js"></script>
+  <script>
+    Breakpoints();
+  </script>
+  
+</head>
+<body>
+  <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" id="navcolor"role="navigation">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                <img alt="Brand" alt="Powerrange" height="30" width="85" src="../assets/images/logo.png"></a>
+      
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav" style="margin-left:35px;">
+                    <li>
+                        <a href="#" style="font-size:13px; font-weight: 400; margin-top:2px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; border-bottom:3px solid #d62d20; color:white; ">ABOUT US</a>
+                    </li>
+                    <li>
+                        <a href="#" style="font-size:13px;  font-weight: 400; margin-top:2px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">REGISTER/ORDER</a>
+                    </li>
+                </ul>
+
+
+
+
+
+
+                <ul class="nav navbar-nav navbar-right" style="margin-right:65px;">
+                <li><a href="#openModal1" style="font-size:13px; font-weight:400; margin-top:2px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">Login</a>
+
+
+<div id="openModal1" class="modalDialog">
+    <div> <a href="#close1" title="Close1" class="close1">X</a>
+
+        
+<div class="logo" style="text-align:center; font-size:20px; font-weight:400; ">POWERange</div>
+<div class="login-block">
+    <h1>Login</h1>
+    <input type="text" value="" placeholder="Username" id="username" />
+    <input type="password" value="" placeholder="Password" id="password" />
+    <button onclick="navigate();">Submit</button>
+</div>
+    </div>
+</div>
+
+                </li>
+                 <li><a href="#" style="font-size:13px; font-weight:400; margin-top:2px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">Help</a></li>
+                  <li><a href="#" style="font-size:13px; font-weight:400; margin-top:2px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">Updates</a></li>
+                </ul>
+
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Image Background Page Header -->
+    <!-- Note: The background image is set within the business-casual.css file. -->
+    <header class="business-header" style="">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                   <div class="tagline">
+                    <h3 style="color:white; margin-top:5px;">Infinitely scalable energy service</h3>
+                    <p style="color:white;">Powerange allows your home or business to maximize your use of clean sustainable energy. By charging from solar panels and making that energy available on demand, Powerrange removes the variability from variable power sources.</p>
+
+                    <a class="btn btn-default" href="#myModal" style="color:#d62d20; text-shadow:none" data-toggle="modal"><i class="icon wb-video" aria-hidden="true"></i>&nbspWatch Video</a>
+    <!-- Modal HTML -->
+    <div id="myModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title">Powerange: integrated power generation</h4>
+                </div>
+                <div class="modal-body">
+                    <iframe id="cartoonVideo" width="560" height="315" src="https://www.youtube.com/embed/MBQ-HuYz4aY?autoplay=true" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+                     </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+ 
+
+    <!-- Page Content -->
+    <div class="container-fluid" style="background-color: #f1f1f1;">
+       </br>
+  </br>
+
+        <div class="row">
+           <div class="row center-boxes">
+            
+            <div class="col-md-3 col-md-push-1 box" style="text-align:center" >
+               <span class="fa-stack fa-3x">
+               <i class="fa fa-circle fa-stack-2x icon-background3"></i>
+               <i class="fa fa-rocket fa-stack-1x" style="font-size:48px;color:#ffffff;" ></i>
+               </span>
+                <h3>The future of energy</h3>
+                <p>Creating a sustainable future focusing on renewable energy resources while using our limited fossil fuel resources efficiently.</p>
+            </div>
+            
+            <div class="col-md-3 col-md-push-1 box" style="text-align:center">
+                <span class="fa-stack fa-3x">
+                <i class="fa fa-circle fa-stack-2x icon-background3"></i>
+                <i class="fa fa-arrows-alt fa-stack-1x" style="font-size:48px;color:#ffffff;" ></i>
+                </span>          
+                <h3>Scalable energy source</h3>
+                <p>Flexible, infinitely scalable modular layout to easily integrate and expand existing systems while serving enegry demands of community.</p>
+            </div>
+
+            <div class="col-md-3 col-md-push-1 box" style="text-align:center">
+                <span class="fa-stack fa-3x">
+                <i class="fa fa-circle fa-stack-2x icon-background3"></i>
+                <i class="fa fa-american-sign-language-interpreting fa-stack-1x" style="font-size:48px;color:#ffffff;" ></i>
+                </span>
+                <h3>Reliabile integrated supply</h3>
+                <p>Automated and seamless energy switching provides reliable uninturrupted power and helps best utilize the benefits of Renewable sources.</p>
+            </div>
+
+            </div>
+        </div>
+
+         <br><br>
+  </div>
+
+        <!-- /.row ../assets/images/logo.png-->
+      
+      
+<div class="container">
+<div class="row">
+
+  <div class="col-md-2">
+  </div>
+
+  <div class="col-md-8" style="text-align:center; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+  <h3>How it Works?<h3/>
+  <div style="font-size:14px;" ><p>A typical Powerange system home setup includes an inverter for converting electricity between direct current and alternating current, a meter for measuring battery charge, backup applications and a sensor that measures usage and switches between renewable and non-renewable based on cap-limit set for the day. Which components are required depends on how you use your home battery.</p></div>
+  </div>
+
+  <div class="col-md-2">
+  </div>
+
+</div>
+</div>
+
+
+<br><br>
+<div class="container">
+<div class="row">
+           <div class="row center-boxes">         
+            <div class="col-md-3 col-md-push-1 box" style="text-align:left" >
+              <p style="font-weight:bold;" >Solar panels</p>
+              <p>Panels convert sunlight into electricity that charges Powerwall and powers your home during the day. Without solar, Powerwall can reduce time of use power bills by strategically shifting energy consumption.</p>
+              <br><br><br><br><br><br><br><br>
+
+                <div class="row">
+                  <div class="col-md-12">
+                   <p style="font-weight:bold;" >Local Area Batteries in community Sensor</p>
+              <p>Group of batteries setup at local plant which will be charged through the solar panels and wind turbines</p>
+                </div>
+                </div>
+
+
+                <br><br><br><br><br><br><br><br><br><br>
+
+                 <div class="row">
+                  <div class="col-md-12">
+                 <p style="font-weight:bold;" >Consumer Battery</p>
+              <p>Consumer Battery setup at consumers home is connected to the loacal plant batteries and getcharged </p>
+                </div>
+                </div>
+
+            </div>
+
+
+                  
+            <div class="col-md-3 col-md-push-1 box" style="text-align:center" >
+              <img class="center-block" width="350" src="../assets/images/how.png" />
+            </div>
+              
+            <div class="col-md-3 col-md-push-1 box" style="text-align:left" >
+             
+                <br><br><br><br><br><br><br><br>
+
+                <div class="row">
+                  <div class="col-md-12">
+                  <p style="font-weight:bold;" >Power Generation</p>
+              <p>DC power is generated from the infrastructure of the local plant.</p>
+                </div>
+                </div>
+
+                 <br><br><br><br><br><br><br><br>
+
+                <div class="row">
+                  <div class="col-md-12">
+                  <p style="font-weight:bold;" >Transmission</p>
+              <p>Power Generated at local plant is converted to AC and transmitted to end users</p>
+                </div>
+                </div>
+
+                <br><br><br><br><br><br><br><br><br><br>
+
+                 <div class="row">
+                  <div class="col-md-12">
+                  <p style="font-weight:bold;">Backup panel and switch</p>
+              <p> An electrical switch automatically activates the backup panel during a power company outage.
+</p>
+                </div>
+                </div>
+
+              </div>            
+         
+            </div>
+          </div>
+ 
+</div>
+<br>
+</div>
+
+
+
+<div class="container-fluid"style="background-color: #f1f1f1;">
+
+<div class="row">
+
+  <div class="col-md-2">
+  </div>
+
+  <div class="col-md-8" style="text-align:center; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+  <h3>Highlights<h3/>
+  <div style="font-size:14px;" ><p>A typical Powerange system home setup includes an inverter for converting electricity between direct current and alternating current, a meter for measuring battery charge, backup applications and a sensor that measures usage and switches between renewable and non-renewable based on cap-limit set for the day. Which components are required depends on how you use your home battery.</p></div>
+  </div>
+
+  <div class="col-md-2">
+  </div>
+
+</div>
+<br><br>
+</div>
+
+
+
+<div class="container-fluid" style="background-color: #f1f1f1;">
+<div class="row">
+<div class="row center-boxes" style="text-align:left; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+  <div class="col-md-3 col-md-push-1 box" >
+  
+<h4>Safety</h4>
+ <p>Our product and service rated level 5 - best in the market. Relax and let us serve you.
+  </p>
+  
+
+  </div>
+  
+   <div class="col-md-3 col-md-push-1 box" >
+    <h4>Availability</h4>
+ <p> 24*7 service guarenteed backed by main power grid supply
+  </p>
+  
+  
+  </div>
+   <div class="col-md-3 col-md-push-1 box" >
+  <h4>Quick processing</h4>
+ <p> We follow a quick three step quick deployment process. <a>view steps to approval</a>
+  </p>
+  </div>
+  
+
+</div>
+</div>
+<br><br>
+</div>
+      
+
+
+
+<div class="container-fluid"  style="background-image: url(../assets/images/hero.png);">
+<div class="row">
+
+  <div class="col-md-2">
+  </div>
+
+  <div class="col-md-8" style="text-align:center;  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+      <br> <br>
+  <h3 style="color: white;" >Register today <h3/>
+  <div style="font-size:14px; color: white;" ><p>...and be part of a sustainable tomorrow</p></div>
+  
+
+  <a  class="btn btn-default" style="color:#d62d20;" href="#openModal"><i class="fa fa-user-plus" aria-hidden="true"></i>Register</a>
+
+<div id="openModal" class="modalDialog">
+    <div> <a href="#close" title="Close" class="close">X</a>
+
+          <h2>Modal Box</h2>
+
+        <p>This is a sample modal box that can be created using the powers of CSS3.</p>
+        <p>You could do a lot of things here like have a pop-up ad that shows when your website loads, or create a login/register form for users.</p>
+    </div>
+</div>
+
+
+
+
+
+  <br> <br>
+
+  </div>
+ 
+  
+
+  <div class="col-md-2">
+  </div>
+
+</div>
+</div>
+
+       
+
+      
+     <!-- /.container -->
+  <!-- Page -->
+
+<!-- Footer -->
+ <footer>
+        <div class="container-fluid" >
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="list-inline">
+                        <li>
+                            <a href="#" style="font-size:14px; color:#d62d20;">Home</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="#about" style="font-size:14px; color:#d62d20;">About Us</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="#services" style="font-size:14px; color:#d62d20;">Login</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="#contact" style="font-size:14px; color:#d62d20;">Help</a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted small">Copyright &copy; Powerange 2016. All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+   
+  
+  <!-- End Page -->
+
+
+  <!-- Core  -->
+  <script src="../assets/vendor/jquery/jquery.js"></script>
+  <script src="../assets/vendor/bootstrap/bootstrap.js"></script>
+  <script src="../assets/vendor/animsition/jquery.animsition.js"></script>
+  <script src="../assets/vendor/asscroll/jquery-asScroll.js"></script>
+  <script src="../assets/vendor/mousewheel/jquery.mousewheel.js"></script>
+  <script src="../assets/vendor/asscrollable/jquery.asScrollable.all.js"></script>
+  <script src="../assets/vendor/ashoverscroll/jquery-asHoverScroll.js"></script>
+
+  <!-- Plugins -->
+  <script src="../assets/vendor/switchery/switchery.min.js"></script>
+  <script src="../assets/vendor/intro-js/intro.js"></script>
+  <script src="../assets/vendor/screenfull/screenfull.js"></script>
+  <script src="../assets/vendor/slidepanel/jquery-slidePanel.js"></script>
+
+  <script src="../assets/vendor/jquery-placeholder/jquery.placeholder.js"></script>
+
+  <!-- Scripts -->
+  <script src="../assets/js/core.js"></script>
+  <script src="../assets/js/site.js"></script>
+
+  <script src="../assets/js/sections/menu.js"></script>
+  <script src="../assets/js/sections/menubar.js"></script>
+  <script src="../assets/js/sections/sidebar.js"></script>
+
+  <script src="../assets/js/configs/config-colors.js"></script>
+  <script src="../assets/js/configs/config-tour.js"></script>
+
+  <script src="../assets/js/components/asscrollable.js"></script>
+  <script src="../assets/js/components/animsition.js"></script>
+  <script src="../assets/js/components/slidepanel.js"></script>
+  <script src="../assets/js/components/switchery.js"></script>
+  <script src="../assets/js/components/jquery-placeholder.js"></script>
+
+  <script>
+
+
+
+function navigate() {
+   var navVal = document.getElementById('username').value; 
+    if(navVal=="AM")
+    { window.location.href = 'AM/connection-request.html';
+    }else if(navVal=="ACM"){
+      window.location.href = 'ACM/dashboard.html';
+    }else if(navVal=="DA"){
+      window.location.href = 'DA/dashboard.html';
+    }else if(navVal=="PM"){
+      window.location.href = 'PM/dashboard.html';
+    }else if(navVal=="customer"){
+      window.location.href = 'customer/customer-dashboard.html';
+    }
+    else if(navVal=="PrjM"){
+      window.location.href = 'PrjM/dashboard.html';
+    }else{
+      window.alert("Use one of the following usernames to login: AM, ACM, DA, PM or customer. Password can be anything.");
+    }
+
+}
+
+
+    (function(document, window, $) {
+      'use strict';
+
+      var Site = window.Site;
+      $(document).ready(function() {
+        Site.run();
+      });
+    })(document, window, jQuery);
+  </script>
+  <script type="text/javascript">
+$(document).ready(function(){
+    /* Get iframe src attribute value i.e. YouTube video url
+    and store it in a variable */
+    var url = $("#cartoonVideo").attr('src');
+    
+    /* Assign empty url value to the iframe src attribute when
+    modal hide, which stop the video playing */
+    $("#myModal").on('hide.bs.modal', function(){
+        $("#cartoonVideo").attr('src', '');
+    });
+    
+    /* Assign the initially stored url back to the iframe src
+    attribute when modal is displayed again */
+    $("#myModal").on('show.bs.modal', function(){
+        $("#cartoonVideo").attr('src', url);
+    });
+});
+</script>
+
+</body>
+
+</html>

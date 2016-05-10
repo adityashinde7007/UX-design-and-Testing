@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html class="no-js before-run" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+  <meta name="description" content="bootstrap admin template">
+  <meta name="author" content="">
+
+  <title>POWERange</title>
+
+  <link rel="apple-touch-icon" href="../../assets/images/apple-touch-icon.png">
+  <link rel="shortcut icon" href="../../assets/images/favicon.ico">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../assets/css/bootstrap-extend.min.css">
+  <link rel="stylesheet" href="../../assets/css/site.min.css">
+
+  <link rel="stylesheet" href="../../assets/vendor/animsition/animsition.css">
+  <link rel="stylesheet" href="../../assets/vendor/asscrollable/asScrollable.css">
+  <link rel="stylesheet" href="../../assets/vendor/switchery/switchery.css">
+  <link rel="stylesheet" href="../../assets/vendor/intro-js/introjs.css">
+  <link rel="stylesheet" href="../../assets/vendor/slidepanel/slidePanel.css">
+  <link rel="stylesheet" href="../../assets/vendor/flag-icon-css/flag-icon.css">
+
+  <!-- Plugin -->
+  <link rel="stylesheet" href="../../assets/vendor/chartist-js/chartist.css">
+  <link rel="stylesheet" href="../../assets/vendor/jvectormap/jquery-jvectormap.css">
+
+  <!-- Page -->
+  <link rel="stylesheet" href="../../assets/css/../fonts/weather-icons/weather-icons.css">
+  <link rel="stylesheet" href="../../assets/css/dashboard/v1.css">
+
+  <!-- Fonts -->
+  <link rel="stylesheet" href="../../assets/fonts/web-icons/web-icons.min.css">
+  <link rel="stylesheet" href="../../assets/fonts/brand-icons/brand-icons.min.css">
+  <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,300italic'>
+
+  <!-- Scripts -->
+  <script src="../../assets/vendor/modernizr/modernizr.js"></script>
+  <script src="../../assets/vendor/breakpoints/breakpoints.js"></script>
+  <script>
+    Breakpoints();
+  </script>
+</head>
+<body class="dashboard">
+  <nav class="site-navbar navbar navbar-default navbar-fixed-top navbar-mega" role="navigation">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle hamburger hamburger-close navbar-toggle-left hided"
+      data-toggle="menubar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="hamburger-bar"></span>
+      </button>
+      <button type="button" class="navbar-toggle collapsed" data-target="#site-navbar-collapse"
+      data-toggle="collapse">
+        <i class="icon wb-more-horizontal" aria-hidden="true"></i>
+      </button>
+      <button type="button" class="navbar-toggle collapsed" data-target="#site-navbar-search"
+      data-toggle="collapse">
+        <span class="sr-only">Toggle Search</span>
+        <i class="icon wb-search" aria-hidden="true"></i>
+      </button>
+      <div class="navbar-brand">
+        <img class="navbar-brand-logo" src="../../assets/images/logo.png" title="POWERange">
+      </div>
+    </div>
+
+    <div class="navbar-container container-fluid">
+      <!-- Navbar Collapse -->
+      <div class="collapse navbar-collapse navbar-collapse-toolbar" id="site-navbar-collapse">
+        <!-- Navbar Toolbar -->
+        <ul class="nav navbar-toolbar">
+          <li class="hidden-float" id="toggleMenubar">
+            <a data-toggle="menubar" href="#" role="button">
+              <i class="icon hamburger hamburger-arrow-left">
+                  <span class="sr-only">Toggle menubar</span>
+                  <span class="hamburger-bar"></span>
+                </i>
+            </a>
+          </li>
+          <li class="hidden-xs" id="toggleFullscreen">
+            <a class="icon icon-fullscreen" data-toggle="fullscreen" href="#" role="button">
+              <span class="sr-only">Toggle fullscreen</span>
+            </a>
+          </li>
+          <li class="hidden-float">
+            <a class="icon wb-search" data-toggle="collapse" href="#site-navbar-search" role="button">
+              <span class="sr-only">Toggle Search</span>
+            </a>
+          </li>
+            </ul>
+          </li>
+        </ul>
+        <!-- End Navbar Toolbar -->
+
+        <!-- Navbar Toolbar Right -->
+        <ul class="nav navbar-toolbar navbar-right navbar-toolbar-right">
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)" data-animation="slide-bottom"
+            aria-expanded="false" role="button">
+              <span class="flag-icon flag-icon-us"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li role="presentation">
+                <a href="javascript:void(0)" role="menuitem">
+                  <span class="flag-icon flag-icon-gb"></span> English</a>
+              </li>
+              <li role="presentation">
+                <a href="javascript:void(0)" role="menuitem">
+                  <span class="flag-icon flag-icon-fr"></span> French</a>
+              </li>
+              <li role="presentation">
+                <a href="javascript:void(0)" role="menuitem">
+                  <span class="flag-icon flag-icon-cn"></span> Chinese</a>
+              </li>
+              <li role="presentation">
+                <a href="javascript:void(0)" role="menuitem">
+                  <span class="flag-icon flag-icon-de"></span> German</a>
+              </li>
+              <li role="presentation">
+                <a href="javascript:void(0)" role="menuitem">
+                  <span class="flag-icon flag-icon-nl"></span> Dutch</a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a class="navbar-avatar dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false"
+            data-animation="slide-bottom" role="button">
+              <span class="avatar avatar-online">
+                <img src="../../assets/portraits/5.jpg" alt="...">
+                <i></i>
+              </span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li role="presentation">
+                <a href="javascript:void(0)" role="menuitem"><i class="icon wb-user" aria-hidden="true"></i> Profile</a>
+              </li>
+              <li role="presentation">
+                <a href="javascript:void(0)" role="menuitem"><i class="icon wb-payment" aria-hidden="true"></i> Billing</a>
+              </li>
+              <li role="presentation">
+                <a href="javascript:void(0)" role="menuitem"><i class="icon wb-settings" aria-hidden="true"></i> Settings</a>
+              </li>
+              <li class="divider" role="presentation"></li>
+              <li role="presentation">
+                <a href="../../html/index.html" role="menuitem"><i class="icon wb-power" aria-hidden="true"></i> Logout</a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a data-toggle="dropdown" href="javascript:void(0)" title="Notifications" aria-expanded="false"
+            data-animation="slide-bottom" role="button">
+              <i class="icon wb-bell" aria-hidden="true"></i>
+              <span class="badge badge-danger up">5</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right dropdown-menu-media" role="menu">
+              <li class="dropdown-menu-header" role="presentation">
+                <h5>NOTIFICATIONS</h5>
+                <span class="label label-round label-danger">New 5</span>
+              </li>
+
+              <li class="list-group" role="presentation">
+                <div data-role="container">
+                  <div data-role="content">
+                    <a class="list-group-item" href="javascript:void(0)" role="menuitem">
+                      <div class="media">
+                        <div class="media-left padding-right-10">
+                          <i class="icon wb-order bg-red-600 white icon-circle" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                          <h6 class="media-heading">A new order has been placed</h6>
+                          <time class="media-meta" datetime="2015-06-12T20:50:48+08:00">5 hours ago</time>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="javascript:void(0)" role="menuitem">
+                      <div class="media">
+                        <div class="media-left padding-right-10">
+                          <i class="icon wb-user bg-green-600 white icon-circle" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                          <h6 class="media-heading">Completed the task</h6>
+                          <time class="media-meta" datetime="2015-06-11T18:29:20+08:00">2 days ago</time>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="javascript:void(0)" role="menuitem">
+                      <div class="media">
+                        <div class="media-left padding-right-10">
+                          <i class="icon wb-settings bg-red-600 white icon-circle" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                          <h6 class="media-heading">Settings updated</h6>
+                          <time class="media-meta" datetime="2015-06-11T14:05:00+08:00">2 days ago</time>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="javascript:void(0)" role="menuitem">
+                      <div class="media">
+                        <div class="media-left padding-right-10">
+                          <i class="icon wb-calendar bg-blue-600 white icon-circle" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                          <h6 class="media-heading">Event started</h6>
+                          <time class="media-meta" datetime="2015-06-10T13:50:18+08:00">3 days ago</time>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="javascript:void(0)" role="menuitem">
+                      <div class="media">
+                        <div class="media-left padding-right-10">
+                          <i class="icon wb-chat bg-orange-600 white icon-circle" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                          <h6 class="media-heading">Message received</h6>
+                          <time class="media-meta" datetime="2015-06-10T12:34:48+08:00">3 days ago</time>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="dropdown-menu-footer" role="presentation">
+                <a class="dropdown-menu-footer-btn" href="javascript:void(0)" role="button">
+                  <i class="icon wb-settings" aria-hidden="true"></i>
+                </a>
+                <a href="javascript:void(0)" role="menuitem">
+                    All notifications
+                  </a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a data-toggle="dropdown" href="javascript:void(0)" title="Messages" aria-expanded="false"
+            data-animation="slide-bottom" role="button">
+              <i class="icon wb-envelope" aria-hidden="true"></i>
+              <span class="badge badge-info up">3</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right dropdown-menu-media" role="menu">
+              <li class="dropdown-menu-header" role="presentation">
+                <h5>MESSAGES</h5>
+                <span class="label label-round label-info">New 3</span>
+              </li>
+
+              <li class="list-group" role="presentation">
+                <div data-role="container">
+                  <div data-role="content">
+                    <a class="list-group-item" href="javascript:void(0)" role="menuitem">
+                      <div class="media">
+                        <div class="media-left padding-right-10">
+                          <span class="avatar avatar-sm avatar-online">
+                            <img src="../../assets/portraits/2.jpg" alt="..." />
+                            <i></i>
+                          </span>
+                        </div>
+                        <div class="media-body">
+                          <h6 class="media-heading">Mary Adams</h6>
+                          <div class="media-meta">
+                            <time datetime="2015-06-17T20:22:05+08:00">30 minutes ago</time>
+                          </div>
+                          <div class="media-detail">Anyways, i would like just do it</div>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="javascript:void(0)" role="menuitem">
+                      <div class="media">
+                        <div class="media-left padding-right-10">
+                          <span class="avatar avatar-sm avatar-off">
+                            <img src="../../assets/portraits/3.jpg" alt="..." />
+                            <i></i>
+                          </span>
+                        </div>
+                        <div class="media-body">
+                          <h6 class="media-heading">Caleb Richards</h6>
+                          <div class="media-meta">
+                            <time datetime="2015-06-17T12:30:30+08:00">12 hours ago</time>
+                          </div>
+                          <div class="media-detail">I checheck the document. But there seems</div>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="javascript:void(0)" role="menuitem">
+                      <div class="media">
+                        <div class="media-left padding-right-10">
+                          <span class="avatar avatar-sm avatar-busy">
+                            <img src="../../assets/portraits/4.jpg" alt="..." />
+                            <i></i>
+                          </span>
+                        </div>
+                        <div class="media-body">
+                          <h6 class="media-heading">June Lane</h6>
+                          <div class="media-meta">
+                            <time datetime="2015-06-16T18:38:40+08:00">2 days ago</time>
+                          </div>
+                          <div class="media-detail">Lorem ipsum Id consectetur et minim</div>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="javascript:void(0)" role="menuitem">
+                      <div class="media">
+                        <div class="media-left padding-right-10">
+                          <span class="avatar avatar-sm avatar-away">
+                            <img src="../../assets/portraits/5.jpg" alt="..." />
+                            <i></i>
+                          </span>
+                        </div>
+                        <div class="media-body">
+                          <h6 class="media-heading">Edward Fletcher</h6>
+                          <div class="media-meta">
+                            <time datetime="2015-06-15T20:34:48+08:00">3 days ago</time>
+                          </div>
+                          <div class="media-detail">Dolor et irure cupidatat commodo nostrud nostrud.</div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="dropdown-menu-footer" role="presentation">
+                <a class="dropdown-menu-footer-btn" href="javascript:void(0)" role="button">
+                  <i class="icon wb-settings" aria-hidden="true"></i>
+                </a>
+                <a href="javascript:void(0)" role="menuitem">
+                    See all messages
+                  </a>
+              </li>
+            </ul>
+          </li>
+        
+        </ul>
+        <!-- End Navbar Toolbar Right -->
+      </div>
+      <!-- End Navbar Collapse -->
+
+      <!-- Site Navbar Seach -->
+      <div class="collapse navbar-search-overlap" id="site-navbar-search">
+        <form role="search">
+          <div class="form-group">
+            <div class="input-search">
+              <i class="input-search-icon wb-search" aria-hidden="true"></i>
+              <input type="text" class="form-control" name="site-search" placeholder="Search...">
+              <button type="button" class="input-search-close icon wb-close" data-target="#site-navbar-search"
+              data-toggle="collapse" aria-label="Close"></button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- End Site Navbar Seach -->
+    </div>
+  </nav>
+  <div class="site-menubar">
+    <div class="site-menubar-body">
+      <div>
+        <div>
+          <ul class="site-menu">
+
+            <li class="site-menu-category"></li>
+
+                <li class="site-menu-item">
+                    <a class="animsition-link" href="dashboard.html" data-slug="dashboard-v2">
+                    <i class="site-menu-icon wb-dashboard" aria-hidden="true"></i>
+                    <span class="site-menu-title" style="font-size:110%;">Dashboard</span>
+                  </a>
+                </li>
+
+                <li class="site-menu-item">
+                    <a class="animsition-link" href="analyze-data.html" data-slug="dashboard-v2">
+                    <i class="site-menu-icon wb-wrench" aria-hidden="true"></i>
+                    <span class="site-menu-title" style="font-size:110%;">Analyze Data</span>
+                  </a>
+                </li>
+
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="mail-box.html" data-slug="dashboard-v2">
+                    <i class="site-menu-icon wb-pie-chart" aria-hidden="true"></i>
+                    <span class="site-menu-title" style="font-size:110%;">Mail Box</span>
+                  </a>
+                </li>
+                
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="quick-search.html" style="border-left:3px solid #FFC107; color:#ECEFF1;"   data-slug="dashboard-v2">
+                    <i class="site-menu-icon wb-pie-chart" aria-hidden="true"></i>
+                    <span class="site-menu-title" style="font-size:110%;">Quick Search</span>
+                  </a>
+                </li>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-menubar-footer">
+      <span>
+    <ul> 
+        <li><a href="" style="font-size:70%; color:#FFC107;">- HELP /FAQs</a></li>
+        <li><a href="" style="font-size:70%; color:#FFC107;">- CONTACT US</a></li>
+        <li><a href="" style="font-size:70%; color:#FFC107;">- TERMS</a></li>
+        <li><a href="" style="font-size:70%; color:#FFC107;">- ABOUT</a></li>
+        <li><a href="" style="font-size:70%; color:#FFC107;">- RELEASE NOTES</a></li>    
+   </ul>
+   </br>
+   <span style="font-size:70%;">
+   © 2016 Powerange Inc. 
+   All rights reserved.</span>
+      </span>
+
+    </div>
+  </div>
+
+
+  <div class="site-gridmenu">
+    <ul>
+      <li>
+        <a href="apps/mailbox/mailbox.html">
+          <i class="icon wb-envelope"></i>
+          <span>Mailbox</span>
+        </a>
+      </li>
+      <li>
+        <a href="apps/calendar/calendar.html">
+          <i class="icon wb-calendar"></i>
+          <span>Calendar</span>
+        </a>
+      </li>
+      <li>
+        <a href="apps/contacts/contacts.html">
+          <i class="icon wb-user"></i>
+          <span>Contacts</span>
+        </a>
+      </li>
+      <li>
+        <a href="apps/media/overview.html">
+          <i class="icon wb-camera"></i>
+          <span>Media</span>
+        </a>
+      </li>
+      <li>
+        <a href="apps/documents/categories.html">
+          <i class="icon wb-order"></i>
+          <span>Documents</span>
+        </a>
+      </li>
+      <li>
+        <a href="apps/projects/projects.html">
+          <i class="icon wb-image"></i>
+          <span>Project</span>
+        </a>
+      </li>
+      <li>
+        <a href="apps/forum/forum.html">
+          <i class="icon wb-chat-group"></i>
+          <span>Forum</span>
+        </a>
+      </li>
+      <li>
+        <a href="index.html">
+          <i class="icon wb-dashboard"></i>
+          <span>Dashboard</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+  <!-- Page -->
+ <div class="page">
+    <div class="page-content padding-30 container-fluid">
+        <div class="row">
+        <div class="col-md-4">
+            <form role="search">
+              <div class="form-group">
+                <div class="input-search">
+                  <i class="input-search-icon wb-search" aria-hidden="true"></i>
+                  <input type="text" class="form-control" name="site-search" placeholder="Search...">
+                  <button type="button" class="input-search-close icon wb-close" data-target="#site-navbar-search"
+                  data-toggle="collapse" aria-label="Close"></button>
+                </div>
+              </div>
+            </form> 
+        </div>
+        <div class="col-md-4">
+            <div class="dropdown pull-left">
+                <button type="button" class="btn btn-default dropdown-toggle" id="exampleColorDropdown1"
+                        data-toggle="dropdown" aria-expanded="false" style="background-color:#ffffff;">
+                    Report Title
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="exampleColorDropdown1" role="menu">
+                    <li role="presentation"><a href="javascript:void(0)" role="menuitem">Report Title</a></li>
+                    <li role="presentation"><a href="javascript:void(0)" role="menuitem">Transaction Id</a></li>
+                    <li role="presentation"><a href="javascript:void(0)" role="menuitem">Employee Number</a></li>
+                    <li role="presentation"><a href="javascript:void(0)" role="menuitem">Consumer ID</a></li>
+                     <li role="presentation"><a href="javascript:void(0)" role="menuitem">Consumer Name</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <button class="btn btn-primary">GO</button>
+        </div>
+        </div>
+        <div class="row" style="margin: 10px 0 0 0">
+            <div class='col-sm-4' style="padding: 0;">
+                <div class="form-group">
+                    <div class='input-group date' id='datetimepicker1'>
+                        <input type='text' class="form-control" />
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class='col-sm-4'>
+                <div class="form-group">
+                    <div class='input-group date' id='datetimepicker2'>
+                        <input type='text' class="form-control" />
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <button id="less_filter_button" class="btn btn-default" style="width:200px;margin-left:20px;">Less Filters</button>
+            </div>
+        </div>
+      </div>
+  </div>
+  <!-- End Page -->
+
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <span class="site-footer-legal">© 2016 POWERange</span>
+    <div class="site-footer-right">
+      Crafted with <i class="red-600 wb wb-heart"></i> at <a href="http://www.northeastern.edu">Northeastern University</a>
+    </div>
+  </footer>
+
+  <!-- Core  -->
+  <script src="../../assets/vendor/jquery/jquery.js"></script>
+  <script src="../../assets/vendor/bootstrap/bootstrap.js"></script>
+  <script src="../../assets/vendor/animsition/jquery.animsition.js"></script>
+  <script src="../../assets/vendor/asscroll/jquery-asScroll.js"></script>
+  <script src="../../assets/vendor/mousewheel/jquery.mousewheel.js"></script>
+  <script src="../../assets/vendor/asscrollable/jquery.asScrollable.all.js"></script>
+  <script src="../../assets/vendor/ashoverscroll/jquery-asHoverScroll.js"></script>
+
+  <!-- Plugins -->
+  <script src="../../assets/vendor/switchery/switchery.min.js"></script>
+  <script src="../../assets/vendor/intro-js/intro.js"></script>
+  <script src="../../assets/vendor/screenfull/screenfull.js"></script>
+  <script src="../../assets/vendor/slidepanel/jquery-slidePanel.js"></script>
+
+  <script src="../../assets/vendor/skycons/skycons.js"></script>
+  <script src="../../assets/vendor/chartist-js/chartist.min.js"></script>
+  <script src="../../assets/vendor/aspieprogress/jquery-asPieProgress.min.js"></script>
+  <script src="../../assets/vendor/jvectormap/jquery-jvectormap.min.js"></script>
+  <script src="../../assets/vendor/jvectormap/maps/jquery-jvectormap-ca-lcc-en.js"></script>
+  <script src="../../assets/vendor/matchheight/jquery.matchHeight-min.js"></script>
+
+  <!-- Scripts -->
+  <script src="../../assets/js/core.js"></script>
+  <script src="../../assets/js/site.js"></script>
+
+  <script src="../../assets/js/sections/menu.js"></script>
+  <script src="../../assets/js/sections/menubar.js"></script>
+  <script src="../../assets/js/sections/sidebar.js"></script>
+
+  <script src="../../assets/js/configs/config-colors.js"></script>
+  <script src="../../assets/js/configs/config-tour.js"></script>
+
+  <script src="../../assets/js/components/asscrollable.js"></script>
+  <script src="../../assets/js/components/animsition.js"></script>
+  <script src="../../assets/js/components/slidepanel.js"></script>
+  <script src="../../assets/js/components/switchery.js"></script>
+  <script src="../../assets/js/components/matchheight.js"></script>
+  <script src="../../assets/js/components/jvectormap.js"></script>
+
+  <script>
+    $(document).ready(function($) {
+      Site.run();
+
+      (function() {
+        var snow = new Skycons({
+          "color": $.colors("blue-grey", 500)
+        });
+        snow.set(document.getElementById("widgetSnow"), "snow");
+        snow.play();
+
+        var sunny = new Skycons({
+          "color": $.colors("blue-grey", 700)
+        });
+        sunny.set(document.getElementById("widgetSunny"), "clear-day");
+        sunny.play();
+      })();
+
+      (function() {
+        var lineareaColor = new Chartist.Line(
+          '#widgetLineareaColor .ct-chart', {
+            labels: ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'],
+            series: [
+              [4, 4.5, 4.3, 4, 5, 6, 5.5],
+              [3, 2.5, 3, 3.5, 4.2, 4, 5],
+              [1, 2, 2.5, 2, 3, 2.8, 4]
+            ]
+          }, {
+            low: 0,
+            showArea: true,
+            showPoint: false,
+            showLine: false,
+            fullWidth: true,
+            chartPadding: {
+              top: 0,
+              right: 0,
+              bottom: 0,
+              left: 0
+            },
+            axisX: {
+              showLabel: false,
+              showGrid: false,
+              offset: 0
+            },
+            axisY: {
+              showLabel: false,
+              showGrid: false,
+              offset: 0
+            }
+          });
+      })();
+
+      (function() {
+        var stacked_bar = new Chartist.Bar(
+          '#widgetStackedBar .ct-chart', {
+            labels: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
+              'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U',
+              'V', 'W', 'X', 'Y', 'Z'
+            ],
+            series: [
+              [50, 90, 100, 90, 110, 100, 120, 130, 115, 95, 80, 85,
+                100, 140, 130, 120, 135, 110, 120, 105, 100, 105,
+                90, 110, 100, 60
+              ],
+              [150, 190, 200, 190, 210, 200, 220, 230, 215, 195,
+                180, 185, 200, 240, 230, 220, 235, 210, 220, 205,
+                200, 205, 190, 210, 200, 160
+              ]
+            ]
+          }, {
+            stackBars: true,
+            fullWidth: true,
+            seriesBarDistance: 0,
+            chartPadding: {
+              top: 0,
+              right: 30,
+              bottom: 30,
+              left: 20
+            },
+            axisX: {
+              showLabel: false,
+              showGrid: false,
+              offset: 0
+            },
+            axisY: {
+              showLabel: false,
+              showGrid: false,
+              offset: 0
+            }
+          });
+      })();
+
+      // timeline
+      // --------
+      (function() {
+        var timeline_labels = [];
+        var timeline_data1 = [];
+        var timeline_data2 = [];
+        var totalPoints = 20;
+        var updateInterval = 1000;
+        var now = new Date().getTime();
+
+        function GetData() {
+          timeline_labels.shift();
+          timeline_data1.shift();
+          timeline_data2.shift();
+
+          while (timeline_data1.length < totalPoints) {
+            var x = Math.random() * 100 + 800;
+            var y = Math.random() * 100 + 400;
+            timeline_labels.push(now += updateInterval);
+            timeline_data1.push(x);
+            timeline_data2.push(y);
+          }
+        }
+
+        var timlelineData = {
+          labels: timeline_labels,
+          series: [
+            timeline_data1,
+            timeline_data2
+          ]
+        };
+
+        var timelineOptions = {
+          low: 0,
+          showArea: true,
+          showPoint: false,
+          showLine: false,
+          fullWidth: true,
+          chartPadding: {
+            top: 0,
+            right: 0,
+            bottom: 0,
+            left: 0
+          },
+          axisX: {
+            showLabel: false,
+            showGrid: false,
+            offset: 0
+          },
+          axisY: {
+            showLabel: false,
+            showGrid: false,
+            offset: 0
+          }
+        };
+        new Chartist.Line("#widgetTimeline .ct-chart", timlelineData,
+          timelineOptions);
+
+        function update() {
+          GetData();
+
+          new Chartist.Line("#widgetTimeline .ct-chart", timlelineData,
+            timelineOptions);
+          setTimeout(update, updateInterval);
+        }
+
+        update();
+
+      })();
+
+      (function() {
+        new Chartist.Line("#widgetLinepoint .ct-chart", {
+          labels: ['1', '2', '3', '4', '5', '6'],
+          series: [
+            [1, 1.5, 0.5, 2, 2.5, 1.5]
+          ]
+        }, {
+          low: 0,
+          showArea: false,
+          showPoint: true,
+          showLine: true,
+          fullWidth: true,
+          lineSmooth: false,
+          chartPadding: {
+            top: -10,
+            right: -4,
+            bottom: 10,
+            left: -4
+          },
+          axisX: {
+            showLabel: false,
+            showGrid: false,
+            offset: 0
+          },
+          axisY: {
+            showLabel: false,
+            showGrid: false,
+            offset: 0
+          }
+        });
+      })();
+
+      (function() {
+        new Chartist.Bar("#widgetSaleBar .ct-chart", {
+          labels: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K',
+            'L', 'M', 'N', 'O', 'P', 'Q'
+          ],
+          series: [
+            [50, 90, 100, 90, 110, 100, 120, 130, 115, 95, 80, 85,
+              100, 140, 130, 120
+            ]
+          ]
+        }, {
+          low: 0,
+          fullWidth: true,
+          chartPadding: {
+            top: -10,
+            right: 20,
+            bottom: 30,
+            left: 20
+          },
+          axisX: {
+            showLabel: false,
+            showGrid: false,
+            offset: 0
+          },
+          axisY: {
+            showLabel: false,
+            showGrid: false,
+            offset: 0
+          }
+        });
+      })();
+
+      (function() {
+        new Chartist.Bar("#widgetWatchList .small-bar-one", {
+          labels: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'],
+          series: [
+            [50, 90, 100, 90, 110, 100, 120, 130]
+          ]
+        }, {
+          low: 0,
+          fullWidth: true,
+          chartPadding: {
+            top: -10,
+            right: 0,
+            bottom: 0,
+            left: 20
+          },
+          axisX: {
+            showLabel: false,
+            showGrid: false,
+            offset: 0
+          },
+          axisY: {
+            showLabel: false,
+            showGrid: false,
+            offset: 0
+          }
+        });
+
+        new Chartist.Bar("#widgetWatchList .small-bar-two", {
+          labels: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'],
+          series: [
+            [50, 90, 100, 90, 110, 100, 120, 120]
+          ]
+        }, {
+          low: 0,
+          fullWidth: true,
+          chartPadding: {
+            top: -10,
+            right: 0,
+            bottom: 0,
+            left: 20
+          },
+          axisX: {
+            showLabel: false,
+            showGrid: false,
+            offset: 0
+          },
+          axisY: {
+            showLabel: false,
+            showGrid: false,
+            offset: 0
+          }
+        });
+
+        new Chartist.Line("#widgetWatchList .line-chart", {
+          labels: ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'],
+          series: [
+            [20, 50, 70, 110, 100, 200, 230],
+            [50, 80, 140, 130, 150, 110, 160]
+          ]
+        }, {
+          low: 0,
+          showArea: false,
+          showPoint: false,
+          showLine: true,
+          lineSmooth: false,
+          fullWidth: true,
+          chartPadding: {
+            top: 0,
+            right: 10,
+            bottom: 0,
+            left: 10
+          },
+          axisX: {
+            showLabel: true,
+            showGrid: false,
+            offset: 30
+          },
+          axisY: {
+            showLabel: true,
+            showGrid: true,
+            offset: 30
+          }
+        });
+      })();
+
+      (function() {
+        new Chartist.Line("#widgetLinepointDate .ct-chart", {
+          labels: ['1', '2', '3', '4', '5', '6'],
+          series: [
+            [1, 1.5, 0.5, 2, 2.5, 1.5]
+          ]
+        }, {
+          low: 0,
+          showArea: false,
+          showPoint: true,
+          showLine: true,
+          fullWidth: true,
+          lineSmooth: false,
+          chartPadding: {
+            top: 0,
+            right: -4,
+            bottom: 10,
+            left: -4
+          },
+          axisX: {
+            showLabel: false,
+            showGrid: false,
+            offset: 0
+          },
+          axisY: {
+            showLabel: false,
+            showGrid: false,
+            offset: 0
+          }
+        });
+
+      })();
+
+    });
+  </script>
+
+</body>
+
+</html>

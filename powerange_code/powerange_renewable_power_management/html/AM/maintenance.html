@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html class="no-js before-run" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+  <meta name="description" content="bootstrap admin template">
+  <meta name="author" content="">
+
+  <title>POWERange</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../assets/css/bootstrap-extend.min.css">
+  <link rel="stylesheet" href="../../assets/css/site.min.css">
+
+  <link rel="stylesheet" href="../../assets/vendor/animsition/animsition.css">
+  <link rel="stylesheet" href="../../assets/vendor/asscrollable/asScrollable.css">
+  <link rel="stylesheet" href="../../assets/vendor/switchery/switchery.css">
+  <link rel="stylesheet" href="../../assets/vendor/slidepanel/slidePanel.css">
+  <link rel="stylesheet" href="../../assets/vendor/flag-icon-css/flag-icon.css">
+
+  <!-- Fonts -->
+  <link rel="stylesheet" href="../../assets/fonts/web-icons/web-icons.min.css">
+  <link rel="stylesheet" href="../../assets/fonts/brand-icons/brand-icons.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap-datetimepicker.css">
+  <link rel="stylesheet" href="../../assets/fonts/glyphicons/glyphicons.min.css">
+  
+  <link rel="stylesheet" href="AM.css">
+</head>
+<body class="dashboard">
+  <nav class="site-navbar navbar navbar-default navbar-fixed-top navbar-mega" role="navigation">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle hamburger hamburger-close navbar-toggle-left hided"
+      data-toggle="menubar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="hamburger-bar"></span>
+      </button>
+      <button type="button" class="navbar-toggle collapsed" data-target="#site-navbar-collapse"
+      data-toggle="collapse">
+        <i class="icon wb-more-horizontal" aria-hidden="true"></i>
+      </button>
+      <button type="button" class="navbar-toggle collapsed" data-target="#site-navbar-search"
+      data-toggle="collapse">
+        <span class="sr-only">Toggle Search</span>
+        <i class="icon wb-search" aria-hidden="true"></i>
+      </button>
+      <div class="navbar-brand">
+        <img class="navbar-brand-logo" src="../../assets/images/logo.png" title="POWERange">
+      </div>
+    </div>
+
+    <div class="navbar-container container-fluid">
+      <!-- Navbar Collapse -->
+      <div class="collapse navbar-collapse navbar-collapse-toolbar" id="site-navbar-collapse">
+        <!-- Navbar Toolbar -->
+        <ul class="nav navbar-toolbar">
+          <li class="hidden-float" id="toggleMenubar">
+            <a data-toggle="menubar" href="#" role="button">
+              <i class="icon hamburger hamburger-arrow-left">
+                  <span class="sr-only">Toggle menubar</span>
+                  <span class="hamburger-bar"></span>
+                </i>
+            </a>
+          </li>
+          <li class="hidden-xs" id="toggleFullscreen">
+            <a class="icon icon-fullscreen" data-toggle="fullscreen" href="#" role="button">
+              <span class="sr-only">Toggle fullscreen</span>
+            </a>
+          </li>
+          <li class="hidden-float">
+            <a class="icon wb-search" data-toggle="collapse" href="#site-navbar-search" role="button">
+              <span class="sr-only">Toggle Search</span>
+            </a>
+          </li>
+            </ul>
+          </li>
+        </ul>
+        <!-- End Navbar Toolbar -->
+
+        <!-- Navbar Toolbar Right -->
+        <ul class="nav navbar-toolbar navbar-right navbar-toolbar-right">
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)" data-animation="slide-bottom"
+            aria-expanded="false" role="button">
+              <span class="flag-icon flag-icon-us"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li role="presentation">
+                <a href="javascript:void(0)" role="menuitem">
+                  <span class="flag-icon flag-icon-gb"></span> English</a>
+              </li>
+              <li role="presentation">
+                <a href="javascript:void(0)" role="menuitem">
+                  <span class="flag-icon flag-icon-fr"></span> French</a>
+              </li>
+              <li role="presentation">
+                <a href="javascript:void(0)" role="menuitem">
+                  <span class="flag-icon flag-icon-cn"></span> Chinese</a>
+              </li>
+              <li role="presentation">
+                <a href="javascript:void(0)" role="menuitem">
+                  <span class="flag-icon flag-icon-de"></span> German</a>
+              </li>
+              <li role="presentation">
+                <a href="javascript:void(0)" role="menuitem">
+                  <span class="flag-icon flag-icon-nl"></span> Dutch</a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a class="navbar-avatar dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false"
+            data-animation="slide-bottom" role="button">
+              <span class="avatar avatar-online">
+                <img src="../../assets/portraits/5.jpg" alt="...">
+                <i></i>
+              </span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li role="presentation">
+                <a href="javascript:void(0)" role="menuitem"><i class="icon wb-user" aria-hidden="true"></i> Profile</a>
+              </li>
+              <li role="presentation">
+                <a href="javascript:void(0)" role="menuitem"><i class="icon wb-payment" aria-hidden="true"></i> Billing</a>
+              </li>
+              <li role="presentation">
+                <a href="javascript:void(0)" role="menuitem"><i class="icon wb-settings" aria-hidden="true"></i> Settings</a>
+              </li>
+              <li class="divider" role="presentation"></li>
+              <li role="presentation">
+                <a href="../../html/index.html" role="menuitem"><i class="icon wb-power" aria-hidden="true"></i> Logout</a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a data-toggle="dropdown" href="javascript:void(0)" title="Notifications" aria-expanded="false"
+            data-animation="slide-bottom" role="button">
+              <i class="icon wb-bell" aria-hidden="true"></i>
+              <span class="badge badge-danger up">5</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right dropdown-menu-media" role="menu">
+              <li class="dropdown-menu-header" role="presentation">
+                <h5>NOTIFICATIONS</h5>
+                <span class="label label-round label-danger">New 5</span>
+              </li>
+
+              <li class="list-group" role="presentation">
+                <div data-role="container">
+                  <div data-role="content">
+                    <a class="list-group-item" href="javascript:void(0)" role="menuitem">
+                      <div class="media">
+                        <div class="media-left padding-right-10">
+                          <i class="icon wb-order bg-red-600 white icon-circle" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                          <h6 class="media-heading">A new order has been placed</h6>
+                          <time class="media-meta" datetime="2015-06-12T20:50:48+08:00">5 hours ago</time>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="javascript:void(0)" role="menuitem">
+                      <div class="media">
+                        <div class="media-left padding-right-10">
+                          <i class="icon wb-user bg-green-600 white icon-circle" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                          <h6 class="media-heading">Completed the task</h6>
+                          <time class="media-meta" datetime="2015-06-11T18:29:20+08:00">2 days ago</time>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="javascript:void(0)" role="menuitem">
+                      <div class="media">
+                        <div class="media-left padding-right-10">
+                          <i class="icon wb-settings bg-red-600 white icon-circle" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                          <h6 class="media-heading">Settings updated</h6>
+                          <time class="media-meta" datetime="2015-06-11T14:05:00+08:00">2 days ago</time>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="javascript:void(0)" role="menuitem">
+                      <div class="media">
+                        <div class="media-left padding-right-10">
+                          <i class="icon wb-calendar bg-blue-600 white icon-circle" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                          <h6 class="media-heading">Event started</h6>
+                          <time class="media-meta" datetime="2015-06-10T13:50:18+08:00">3 days ago</time>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="javascript:void(0)" role="menuitem">
+                      <div class="media">
+                        <div class="media-left padding-right-10">
+                          <i class="icon wb-chat bg-orange-600 white icon-circle" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                          <h6 class="media-heading">Message received</h6>
+                          <time class="media-meta" datetime="2015-06-10T12:34:48+08:00">3 days ago</time>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="dropdown-menu-footer" role="presentation">
+                <a class="dropdown-menu-footer-btn" href="javascript:void(0)" role="button">
+                  <i class="icon wb-settings" aria-hidden="true"></i>
+                </a>
+                <a href="javascript:void(0)" role="menuitem">
+                    All notifications
+                  </a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a data-toggle="dropdown" href="javascript:void(0)" title="Messages" aria-expanded="false"
+            data-animation="slide-bottom" role="button">
+              <i class="icon wb-envelope" aria-hidden="true"></i>
+              <span class="badge badge-info up">3</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right dropdown-menu-media" role="menu">
+              <li class="dropdown-menu-header" role="presentation">
+                <h5>MESSAGES</h5>
+                <span class="label label-round label-info">New 3</span>
+              </li>
+
+              <li class="list-group" role="presentation">
+                <div data-role="container">
+                  <div data-role="content">
+                    <a class="list-group-item" href="javascript:void(0)" role="menuitem">
+                      <div class="media">
+                        <div class="media-left padding-right-10">
+                          <span class="avatar avatar-sm avatar-online">
+                            <img src="../../assets/portraits/2.jpg" alt="..." />
+                            <i></i>
+                          </span>
+                        </div>
+                        <div class="media-body">
+                          <h6 class="media-heading">Mary Adams</h6>
+                          <div class="media-meta">
+                            <time datetime="2015-06-17T20:22:05+08:00">30 minutes ago</time>
+                          </div>
+                          <div class="media-detail">Anyways, i would like just do it</div>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="javascript:void(0)" role="menuitem">
+                      <div class="media">
+                        <div class="media-left padding-right-10">
+                          <span class="avatar avatar-sm avatar-off">
+                            <img src="../../assets/portraits/3.jpg" alt="..." />
+                            <i></i>
+                          </span>
+                        </div>
+                        <div class="media-body">
+                          <h6 class="media-heading">Caleb Richards</h6>
+                          <div class="media-meta">
+                            <time datetime="2015-06-17T12:30:30+08:00">12 hours ago</time>
+                          </div>
+                          <div class="media-detail">I checheck the document. But there seems</div>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="javascript:void(0)" role="menuitem">
+                      <div class="media">
+                        <div class="media-left padding-right-10">
+                          <span class="avatar avatar-sm avatar-busy">
+                            <img src="../../assets/portraits/4.jpg" alt="..." />
+                            <i></i>
+                          </span>
+                        </div>
+                        <div class="media-body">
+                          <h6 class="media-heading">June Lane</h6>
+                          <div class="media-meta">
+                            <time datetime="2015-06-16T18:38:40+08:00">2 days ago</time>
+                          </div>
+                          <div class="media-detail">Lorem ipsum Id consectetur et minim</div>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="javascript:void(0)" role="menuitem">
+                      <div class="media">
+                        <div class="media-left padding-right-10">
+                          <span class="avatar avatar-sm avatar-away">
+                            <img src="../../assets/portraits/5.jpg" alt="..." />
+                            <i></i>
+                          </span>
+                        </div>
+                        <div class="media-body">
+                          <h6 class="media-heading">Edward Fletcher</h6>
+                          <div class="media-meta">
+                            <time datetime="2015-06-15T20:34:48+08:00">3 days ago</time>
+                          </div>
+                          <div class="media-detail">Dolor et irure cupidatat commodo nostrud nostrud.</div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="dropdown-menu-footer" role="presentation">
+                <a class="dropdown-menu-footer-btn" href="javascript:void(0)" role="button">
+                  <i class="icon wb-settings" aria-hidden="true"></i>
+                </a>
+                <a href="javascript:void(0)" role="menuitem">
+                    See all messages
+                  </a>
+              </li>
+            </ul>
+          </li>
+        
+        </ul>
+        <!-- End Navbar Toolbar Right -->
+      </div>
+      <!-- End Navbar Collapse -->
+
+      <!-- Site Navbar Seach -->
+      <div class="collapse navbar-search-overlap" id="site-navbar-search">
+        <form role="search">
+          <div class="form-group">
+            <div class="input-search">
+              <i class="input-search-icon wb-search" aria-hidden="true"></i>
+              <input type="text" class="form-control" name="site-search" placeholder="Search...">
+              <button type="button" class="input-search-close icon wb-close" data-target="#site-navbar-search"
+              data-toggle="collapse" aria-label="Close"></button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- End Site Navbar Seach -->
+    </div>
+  </nav>
+  <div class="site-menubar">
+    <div class="site-menubar-body">
+      <div>
+        <div>
+          <ul class="site-menu">
+
+            <li class="site-menu-category"></li>
+
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="connection-request.html" data-slug="dashboard-v2">
+                    <i class="site-menu-icon wb-dashboard" aria-hidden="true"></i>
+                    <span class="site-menu-title" style="font-size:110%;">Connection Requests</span>
+                  </a>
+                </li>
+
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="maintenance.html" style="border-left:3px solid #FFC107; color:#ECEFF1;" data-slug="dashboard-v2">
+                    <i class="site-menu-icon wb-wrench" aria-hidden="true"></i>
+                    <span class="site-menu-title" style="font-size:110%;">Maintenance</span>
+                  </a>
+                </li>
+
+               <li class="site-menu-item">
+                  <a class="animsition-link" href="consumer-database.html" data-slug="dashboard-v2">
+                    <i class="site-menu-icon wb-clipboard" aria-hidden="true"></i>
+                    <span class="site-menu-title" style="font-size:110%;">Consumer Database</span>
+                  </a>
+                </li>
+
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="mail-box.html"  data-slug="dashboard-v2">
+                    <i class="site-menu-icon wb-pie-chart" aria-hidden="true"></i>
+                    <span class="site-menu-title" style="font-size:110%;">Mail Box</span>
+                  </a>
+                </li>
+                
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="quick-search.html"  data-slug="dashboard-v2">
+                    <i class="site-menu-icon input-search-icon wb-search" aria-hidden="true"></i>
+                    <span class="site-menu-title" style="font-size:110%;">Quick Search</span>
+                  </a>
+                </li>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-menubar-footer">
+      <span>
+    <ul> 
+        <li><a href="" style="font-size:70%; color:#FFC107;">- HELP /FAQs</a></li>
+        <li><a href="" style="font-size:70%; color:#FFC107;">- CONTACT US</a></li>
+        <li><a href="" style="font-size:70%; color:#FFC107;">- TERMS</a></li>
+        <li><a href="" style="font-size:70%; color:#FFC107;">- ABOUT</a></li>
+        <li><a href="" style="font-size:70%; color:#FFC107;">- RELEASE NOTES</a></li>    
+   </ul>
+   </br>
+   <span style="font-size:70%;">
+   © 2016 Powerange Inc. 
+   All rights reserved.</span>
+      </span>
+
+    </div>
+  </div>
+
+  <!-- Page -->
+  <div class="page">
+    <div class="page-content padding-30 container-fluid">
+           <div class="alert-message">
+                <table>
+                   <tbody><tr>
+                     <td style="width:100%;"> 
+                         <h3 style="margin-top: 10px;margin-bottom: 5px;">Attention Items:</h3>
+                         <p style="margin-bottom: 5px;"> - You have 16 new connection requests.
+                         <a href="">view</a></p>
+                         <p> - 20 records have been updated.
+                         <a href="">view</a></p>
+                     </td>
+                     <td><button id="close" class="close">×</button></td>
+                   </tr>
+                  </tbody>
+                </table> 
+			</div>
+            <div class="row row-lg">
+            <div class="col-md-10">
+              <!-- Example Tabs Solid -->
+              <div class="example-wrap">
+                <div class="nav-tabs-horizontal">
+                  <ul class="nav nav-tabs nav-tabs-solid" data-plugin="nav-tabs" role="tablist">
+                    <li class="active" role="presentation"><a data-toggle="tab" href="#exampleTabsSolidOne" aria-controls="exampleTabsSolidOne"
+                      role="tab">Maintenance Requests</a></li>
+                  </ul>
+                  <div class="tab-content">
+                    <div class="tab-pane active" id="exampleTabsSolidOne" role="tabpanel">
+                        <div class="panel">
+                        <div class="panel-body">
+                             <div style="background-color: #D6D6D6;padding: 10px;">
+                        <div class="row" style="margin:0">
+                            <div class="dropdown pull-left">
+                             <button type="button" class="btn btn-default dropdown-toggle" id="exampleColorDropdown1"
+                                     data-toggle="dropdown" aria-expanded="false" style="background-color:#ffffff;">
+                               Pending Requests
+                               <span class="caret"></span>
+                             </button>
+                             <ul class="dropdown-menu" aria-labelledby="exampleColorDropdown1" role="menu">
+                               <li role="presentation"><a href="javascript:void(0)" role="menuitem">All</a></li>
+                               <li role="presentation"><a href="javascript:void(0)" role="menuitem">Pending Requests</a></li>
+                               <li role="presentation"><a href="javascript:void(0)" role="menuitem">Approved Requests</a></li>
+                               <li role="presentation"><a href="javascript:void(0)" role="menuitem">In Process Requests</a></li>
+                             </ul>
+                            </div>
+                            <div class="input-search" style="width: 45%;display: inline-block;margin-left: 20px;">
+                                <i class="input-search-icon wb-search" aria-hidden="true" style="left:auto"></i>
+                                <input type="text" class="form-control" name="site-search" placeholder="Search...">
+                                <button type="button" class="input-search-close icon wb-close" data-target="#site-navbar-search"
+                                        data-toggle="collapse" aria-label="Close"></button>
+                            </div>
+                            <button id="more_filter_button" class="btn btn-default" style="width:200px;margin-left:20px;" onclick="showDateFilters()">More Filters</button>
+                       </div>
+                        <div id="date_filter" class="row" style="margin: 10px 0 0 0">
+                            <div class='col-sm-4' style="padding: 0;">
+                                <div class="form-group">
+                                    <div class='input-group date' id='datetimepicker1'>
+                                        <input type='text' class="form-control" />
+                                        <span class="input-group-addon">
+                                            <span class="glyphicon glyphicon-calendar"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                             <div class='col-sm-4'>
+                                <div class="form-group">
+                                    <div class='input-group date' id='datetimepicker2'>
+                                        <input type='text' class="form-control" />
+                                        <span class="input-group-addon">
+                                            <span class="glyphicon glyphicon-calendar"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <button id="less_filter_button" class="btn btn-default" style="width:200px;margin-left:20px;" onclick="hideDateFilters()">Less Filters</button>
+                            </div>
+                        </div>
+                        </div>
+                            <div class="row" style="margin-top:20px;">
+                                <span class="number-circle" style="background-color: #929292"></span>
+                                <span>Pending Requests</span>
+                                <span class="number-circle" style="background-color: #D6D6D6"></span>
+                                <span>Approved Requests</span>
+                                <span class="number-circle" style="background-color: #444444"></span>
+                                <span>On Process Requests</span>
+                            </div>
+                            
+                            <div class="modal" id="request_modal_dialog">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="closeModal()">
+                                                <span aria-hidden="true">×</span>
+                                            </button>
+                                            <h4 class="modal-title">Request Number: 467</h4>
+                                            <h4 class="modal-title">Request Status: Pending For Approval</h4>
+                                        </div>
+
+                                        <div class="modal-body">
+                                            <h5>Request Details</h5>
+                                            <div class="row" style="margin: 0;padding: 5px;border: 1px solid black">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                Integer nec odio. Praesent libero. Sed cursus ante
+                                                dapibus diam. 
+                                            </div>
+                                        </div>
+
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default margin-top-5" data-dismiss="modal" onclick="closeModal()">Close</button>
+                                            <button type="button" class="btn btn-primary margin-top-5" data-dismiss="modal">Approve Request</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <table class="table table-hover dataTable table-striped width-full" data-plugin="dataTable" style="margin-top:30px">
+                            <thead>
+                              <tr>
+                                <th>Select</th>
+                                <th>Sr No.</th>
+                                <th>Req No.</th>
+                                <th>Status</th>
+                                <th>Date Requested</th>
+                                <th>Date Approved</th>
+                                <th>Amount Paid</th>
+                                 <th>Comments</th>
+                                 <th>Details</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>
+                                    <input type="checkbox" onclick="showDialog()"/>
+                                </td>
+                                <td>1</td>
+                                <td>1244</td>
+                                <td><span class="number-circle" style="background-color: #929292"></span></td>
+                                <td>22/04/2016</td>
+                                <td>22/04/2016</td>
+                                <td>$234</td>
+                                <td><a href="">Add</a></td>
+                                <td><a href="">View</a></td>
+                              </tr>
+                              <tr>
+                                <td>
+                                    <input type="checkbox" onclick="showDialog()"/>
+                                </td>
+                                <td>2</td>
+                                <td>1244</td>
+                                <td><span class="number-circle" style="background-color: #929292"></span></td>
+                                <td>22/04/2016</td>
+                                <td>22/04/2016</td>
+                                <td>$234</td>
+                                <td><a href="">Add</a></td>
+                                <td><a href="">View</a></td>
+                              </tr>
+                              <tr>
+                                <td>
+                                    <input type="checkbox" onclick="showDialog()"/>
+                                </td>
+                                <td>3</td>
+                                <td>1245</td>
+                                <td><span class="number-circle" style="background-color: #929292"></span></td>
+                                <td>22/04/2016</td>
+                                <td>22/04/2016</td>
+                                <td>$234</td>
+                                <td><a href="">Add</a></td>
+                                <td><a href="">View</a></td>
+                              </tr>
+                              <tr>
+                                <td>
+                                    <input type="checkbox" onclick="showDialog()"/>
+                                </td>
+                                <td>4</td>
+                                <td>1245</td>
+                                <td><span class="number-circle" style="background-color: #929292"></span></td>
+                                <td>22/04/2016</td>
+                                <td>22/04/2016</td>
+                                <td>$234</td>
+                                <td><a href="">Add</a></td>
+                                <td><a href="">View</a></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <!-- End Panel Basic -->
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End Example Tabs Solid -->
+            </div>
+          </div>
+      </div>
+  </div>
+  <!-- End Page -->
+
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <span class="site-footer-legal">© 2016 POWERange</span>
+    <div class="site-footer-right">
+      Crafted with <i class="red-600 wb wb-heart"></i> at <a href="http://www.northeastern.edu">Northeastern University</a>
+    </div>
+  </footer>
+
+  <!-- Core  -->
+  <script src="../../assets/vendor/jquery/jquery.js"></script>
+  <script src="../../assets/vendor/bootstrap/bootstrap.js"></script>
+  <script src="../../assets/vendor/moment/moment.min.js"></script>
+  <script src="../../assets/vendor/bootstrap/bootstrap-datetimepicker.js"></script>
+  <script type="text/javascript">
+                $('#date_filter').hide();
+                $('#request_modal_dialog').hide();
+                $('#datetimepicker1').datetimepicker({
+                     defaultDate: "11/1/2013"
+                });
+                $('#datetimepicker2').datetimepicker({
+                     defaultDate: "11/1/2013"
+                });
+                
+                function showDateFilters(){
+                    $('#date_filter').show();
+                    $('#more_filter_button').hide();
+                    $('#less_filter_button').show();
+                }
+                function hideDateFilters(){
+                    $('#date_filter').hide();
+                    $('#more_filter_button').show();
+                    $('#less_filter_button').hide();
+                }
+                
+                function showDialog(){
+                    $('#request_modal_dialog').show();
+                }
+                
+                function closeModal(){
+                    $('#request_modal_dialog').hide();
+                }
+        </script>
+
+</body>
+
+</html>
